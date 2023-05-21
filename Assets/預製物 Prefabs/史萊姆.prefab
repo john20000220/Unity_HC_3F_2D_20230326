@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 6969978641678453215}
   - component: {fileID: 6969978641678453214}
   - component: {fileID: 6969978641678453213}
-  - component: {fileID: 6980947379196181082}
   m_Layer: 0
   m_Name: "\u53F2\u840A\u59C6"
   m_TagString: Untagged
@@ -199,19 +198,6 @@ MonoBehaviour:
   prefabWeapon: {fileID: 8311177760484377934, guid: 5f198116ca18c214fa4701baa236c6ab,
     type: 3}
   pointWeapon: {fileID: 6969978641784783890}
---- !u!114 &6980947379196181082
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6969978641678453210}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f140342822d9e44eae71101d42aa487, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  data: {fileID: 0}
 --- !u!1 &6969978641784783981
 GameObject:
   m_ObjectHideFlags: 0
