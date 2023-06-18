@@ -6,7 +6,7 @@ public class DataSkill : ScriptableObject
     [Header("技能名稱")]
     public string nameSkill;
 
-    [Header("技能每個等級數值")]
+    [Header("技能等級")]
     public float[] skillValues;
 
     [Header("技能圖示")]
@@ -17,4 +17,8 @@ public class DataSkill : ScriptableObject
 
     public int lv = 1;
 
+    private void OnDisable()
+    {
+        lv = 1;
+    }
 }
