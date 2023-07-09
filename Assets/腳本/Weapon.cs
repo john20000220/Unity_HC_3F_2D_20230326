@@ -8,6 +8,8 @@ public class Weapon : MonoBehaviour
     public Rigidbody2D rig;
     [Header("武器發射力道")]
     public Vector2 power;
+    [Header("武器攻擊力")]
+    public float attack = 50;
 
     private void Awake()
     {

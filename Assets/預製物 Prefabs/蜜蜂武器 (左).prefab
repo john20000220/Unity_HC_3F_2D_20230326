@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8235122401205350772}
   - component: {fileID: 4966728846180056245}
   - component: {fileID: 7677084051656001757}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "\u871C\u8702\u6B66\u5668 (\u5DE6)"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -160,3 +160,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rig: {fileID: 4966728846180056245}
   power: {x: -1500, y: 0}
+  attack: 0
