@@ -11,14 +11,12 @@ public class DamageSystem : MonoBehaviour
     [Header("µe¥¬¶Ë®`­È")]
     public GameObject prefabDamage;
 
-    private float hp;
-
-    private DataHealthEnemy dataEnemy;
+    protected float hp;
+    protected float hpMax;
 
     private void Awake()
     {
         hp = data.hp;
-        dataEnemy = (DataHealthEnemy)data;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -30,27 +28,19 @@ public class DamageSystem : MonoBehaviour
         }
     }
 
-    private void GetDamage(float damage)
+    public virtual void GetDamage(float damage)
     {
         print($"<color=#ff6699>¨ü¨ìªº¶Ë®`{damage}</color>");
         hp -= damage;
-        GameObject tempDamage = Instantiate(prefabDamage, transform.position, transform.rotation);
+        GameObject tempDamage = Instantiate(prefabDamage, transform.position, Quaternion.identity);
         tempDamage.transform.Find("¤å¦r¶Ë®`­È").GetComponent<TextMeshProUGUI>().text = damage.ToString();
         Destroy(tempDamage, 1.5f);
         if (hp <= 0) Dead();
     }
 
-    private void Dead()
+    protected virtual void Dead()
     {
-        Destroy(gameObject);
-        DropExp();
+
     }
 
-    private void DropExp()
-    {
-        if(Random.value <= dataEnemy.dropProbability)
-        {
-            Instantiate(dataEnemy.prefabExp, transform.position, transform.rotation);
-        }
-    }
 }

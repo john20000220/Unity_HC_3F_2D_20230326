@@ -11,11 +11,17 @@ public class WeaponSystem : MonoBehaviour
     [Header("武器生成位置")]
     public Transform pointWeapon;
 
+
     public bool onHit = false;
 
     private void SpawnWeapon()
     {
         Instantiate(prefabWeapon, pointWeapon.position, pointWeapon.rotation);
+
+        AudioClip sound = SoundManager.instance.weaponFired;
+
+        SoundManager.instance.PlaySound(sound, 0.7f, 2);
+
     }
 
     private void Awake()

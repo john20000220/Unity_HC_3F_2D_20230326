@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3171128436705742576}
   - component: {fileID: 1283034185692045755}
   - component: {fileID: 2378323496633439219}
-  - component: {fileID: 2322872512921794574}
+  - component: {fileID: 7233097536436547909}
   m_Layer: 0
   m_Name: "\u9D28\u5B50"
   m_TagString: Enemy
@@ -138,8 +138,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3.5
+  data: {fileID: 11400000, guid: b76147d2e5fcbb34a9e7af6ab72efd6d, type: 2}
   player: {fileID: 6969978641678453209, guid: c34cd94c8ba028748820aa04a7306d6f, type: 3}
---- !u!114 &2322872512921794574
+--- !u!114 &7233097536436547909
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -148,7 +149,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2162899247192341883}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f140342822d9e44eae71101d42aa487, type: 3}
+  m_Script: {fileID: 11500000, guid: 74e94db115f1dd94682fca29a57d1e99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: b76147d2e5fcbb34a9e7af6ab72efd6d, type: 2}

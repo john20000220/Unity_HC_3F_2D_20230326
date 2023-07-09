@@ -111,6 +111,7 @@ public class LevelManager : MonoBehaviour
 			goChooseSkills[i].transform.Find("技能圖示").GetComponent<Image>().sprite = randomSkill[i].iconSkill;
 			goChooseSkills[i].transform.Find("技能描述").GetComponent<Text>().text = randomSkill[i].description;
 		}
+
 	}
 
 	public void ClickSkillButton(int number)
@@ -127,6 +128,10 @@ public class LevelManager : MonoBehaviour
 
 		Time.timeScale = 1;
 		goLevelUp.SetActive(false);
+
+		AudioClip sound = SoundManager.instance.btnLevelupSkill;
+
+		SoundManager.instance.PlaySound(sound, 0.7f, 2);
 	}
 
 	private void UpgradePlayerHealth(int number)
