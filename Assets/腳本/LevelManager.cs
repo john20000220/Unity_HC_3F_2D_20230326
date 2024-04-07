@@ -60,9 +60,6 @@ public class LevelManager : MonoBehaviour
 	{
 		controlSystem.moveSpeed = dataskills[3].skillValues[0];
 		weaponBee1.attack = dataskills[0].skillValues[0];
-		weaponBee2.attack = dataskills[0].skillValues[0];
-		weaponBee3.attack = dataskills[0].skillValues[0];
-		weaponBee4.attack = dataskills[0].skillValues[0];
 		weaponSystem.interval = dataskills[2].skillValues[0];
 		dataHealth.hp = dataskills[2].skillValues[0];
 		expBanana.radius = dataskills[4].skillValues[0];
