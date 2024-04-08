@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.PlayerLoop;
 
 public class DamageSystem : MonoBehaviour
 {
@@ -14,7 +15,12 @@ public class DamageSystem : MonoBehaviour
     protected float hp;
     protected float hpMax;
 
-    private void Awake()
+    private void Start()
+    {
+        hpMax = data.hp;
+    }
+
+    private void Update()
     {
         hp = data.hp;
     }

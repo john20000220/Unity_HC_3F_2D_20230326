@@ -4,7 +4,7 @@ public class ControlSystem : MonoBehaviour
 {
     [Header("移動速度")]
     [Range(0.5f, 99.9f)]
-    public float moveSpeed = 3.5f;
+    public float moveSpeed = 10f;
 
     [Header("2D 剛體")]
     public Rigidbody2D rig;
@@ -22,7 +22,7 @@ public class ControlSystem : MonoBehaviour
 
     private void Start()
     {
-        
+        moveSpeed = 10f;
     }
 
     private void Update()

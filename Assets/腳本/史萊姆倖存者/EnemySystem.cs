@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemySystem : MonoBehaviour
 {
@@ -28,26 +29,22 @@ public class EnemySystem : MonoBehaviour
     private void Update()
     {
         transform.position = Vector3.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
-        Attack();
 
         float distance = Vector3.Distance(transform.position, player.position);
-        //print($"<color=#ff9966>距離：{distance}</color>");
+        print($"<color=#ff9966>距離：{distance}</color>");
         if (distance < data.attackRange) Attack();
-
-        if (transform.position.x > player.position.x) transform.eulerAngles = new Vector3(0, 0, 0);
-        if (transform.position.x < player.position.x) transform.eulerAngles = new Vector3(0, 100, 0);
     }
 
     private void Attack() 
     {
         timer += Time.deltaTime;
-        //print($"<color=#99ff66>計時器：{timer}</color>");
+        print($"<color=#99ff66>計時器：{timer}</color>");
 
         if (timer > data.attackSpeed) 
         {
-            print("<color=#9966ff>攻擊玩家！</color>");
-            damagePlayer.GetDamage(data.attack);
-            timer = 0;
+           print("<color=#9966ff>攻擊玩家！</color>");
+           damagePlayer.GetDamage(data.attack);
+           timer = 0;
         }
     }
 }

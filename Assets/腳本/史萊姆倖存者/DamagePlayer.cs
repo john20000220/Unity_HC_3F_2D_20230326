@@ -4,17 +4,25 @@ using UnityEngine.UI;
 public class DamagePlayer : DamageSystem
 {
     [Header("血條")]
-    public Image imgHp;
+    public Text imgHp;
     [Header("控制系統")]
     public ControlSystem controlSystem;
-    [Header("結束畫面")]
-    public GameObject gameOver;
+    //[Header("結束畫面")]
+    //public GameObject gameOver;
+    public int attackTime;
+    public Text getDamaged;
+
+    private void Update()
+    {
+        imgHp.text = "玩家血量：" + data.hp.ToString();
+        getDamaged.text = "被攻擊次數：" + attackTime.ToString();
+    }
 
     public override void GetDamage(float damage)
     {
         base.GetDamage(damage);
 
-        imgHp.fillAmount = hp / hpMax;
+        attackTime++;
 
         AudioClip sound = SoundManager.instance.playerDamaged;
 
@@ -25,7 +33,7 @@ public class DamagePlayer : DamageSystem
     {
         controlSystem.enabled = false;
 
-        gameOver.SetActive(true);
+        //gameOver.SetActive(true);
 
         AudioClip sound = SoundManager.instance.playerDead;
 

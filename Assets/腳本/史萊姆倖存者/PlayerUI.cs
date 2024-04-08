@@ -11,6 +11,6 @@ public class PlayerUI : MonoBehaviour
 	// Update is called once per frame
 	void Update()
     {
-		transform.position = player.position;
+		transform.position = new Vector2(player.position.x ,player.position.y -0.75f);
     }
 }
